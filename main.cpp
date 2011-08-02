@@ -1,12 +1,11 @@
 // Raytracing Project: Egger & Zuber, 2011
 
-#include <iostream.h>
-#include "functions.h"
+#include <iostream>
+#include "material.hpp"
 
 int main( int argc, char *argv[])
 {
-    cout << "Command line arguments: " << argc << endl;
-    cout << "Test function: " << factorial(5) << endl;
+    std::cout << "Command line arguments: " << argc << std::endl;
 
     return 0;
 }
