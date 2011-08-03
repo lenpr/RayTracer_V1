@@ -1,7 +1,15 @@
 CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=
-SOURCES=main.cpp vector_points.cpp
+SOURCES=./src/main.cpp \
+		./src/point3f.cpp \
+		./src/vec3f.cpp \
+		./src/ray.cpp \
+		./src/camera.cpp \ 
+		./src/color.cpp \
+		./src/object.cpp \
+		./src/scene.cpp  \
+		./src/light.cpp 
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=RT
 
