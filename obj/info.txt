@@ -1,2 +1,2 @@
-directory for all the *.o files, to create and remove them, use:
-make all && make clean in the root directory
+directory for all the *.o files, to create, use and remove them:
+execute "make clean && make all" in the root directory!
