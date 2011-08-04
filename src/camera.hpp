@@ -17,9 +17,12 @@ typedef std::vector<std::vector<Ray> > RayGrid;
 class CameraGrid {
 
 public:
-	CameraGrid(const Point3f& upperLeft, const Point3f& lowerRight, unsigned int resWidth, unsigned int resHeight) : grid() {
-		// TODO
-	}
+	CameraGrid(const Point3f& upperLeft, const Point3f& lowerRight, unsigned int resWidth, unsigned int resHeight);
+
+	int width() const { return grid.size(); }
+	int height() const { return grid[0].size(); }
+
+	Point3f at(int x, int y) const { return grid[x][y]; }
 
 private:
 	std::vector<std::vector<Point3f> > grid;

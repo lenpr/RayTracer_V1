@@ -6,8 +6,13 @@
  */
 
 #include "scene.hpp"
+#include  <algorithm>
 
-Scene::Scene() {
-	// TODO Auto-generated constructor stub
+bool isLight (const Object& obj) { return obj.isLightSource(); }
 
+Scene::Scene(const std::vector<Object>& objects) : objects(), lights() {
+
+	std::copy(objects.begin(), objects.end(), this->objects.begin());
+
+	std::remove_copy_if(objects.begin(), objects.end(), this->objects.begin(), isLight);
 }

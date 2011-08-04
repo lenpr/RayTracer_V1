@@ -10,14 +10,16 @@
 
 #include "camera.hpp"
 #include "object.hpp"
+#include <vector>
 
 
 class Scene {
 public:
-	Scene();
+	Scene(const std::vector<Object>& objects);
 
 private:
-
+	std::vector<Object> objects;
+	std::vector<Object> lights;
 };
 
 #endif /* SCENE_HPP_ */

@@ -23,12 +23,18 @@ public:
 	virtual float opacity(const Point3f& p) = 0;
 };
 
-//class GenericMaterial : Material {
-//public:
-//	Color getColor(const Point3f& p) { return Color(); }
-//	float specularity(const Point3f& p) { return 0.0f; }
-//	float refraction(const Point3f& p) { return 0.0f; }
-//	float opacity(const Point3f& p) { return 0.0f; }
-//};
+class BasicMaterial : Material {
+public:
+	BasicMaterial() : color() {}
+	BasicMaterial(const Color& color) : color(color) {}
+
+	Color getColor(const Point3f& p) { return color; }
+	float specularity(const Point3f& p) { return 0.0f; }
+	float refraction(const Point3f& p) { return 0.0f; }
+	float opacity(const Point3f& p) { return 1.0f; }
+
+private:
+	Color color;
+};
 
 #endif /* MATERIAL_HPP_ */
