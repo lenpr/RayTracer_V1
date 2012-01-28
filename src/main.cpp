@@ -5,7 +5,7 @@
 
 int main( int argc, char *argv[])
 {
-    std::cout << "Command line arguments: " << argc << std::endl;
+    std::cout << "Number of command line arguments: " << argc << std::endl;
 
     return 0;
 }
